@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CryptoLive</title>
+    <script defer src="main.js"></script>
+
+    <link rel="stylesheet" href="./design/style.css" />
+    <link rel="stylesheet" href="./design/checkBox.css" />
+    <link rel="stylesheet" href="./design/maxCoinsWindow.css" />
+    <link rel="stylesheet" href="./design/coinCard.css" />
+    <link rel="stylesheet" href="./design/parallax.css" />
+  </head>
+
+  <body>
+    <div id="coin-bg"></div>
+
+    <div class="overlay"></div>
+
+    <nav>
+      <a href="index.html" aria-current="page">Home Page</a>
+      <a href="liveReports.html">Live reports</a>
+      <a href="about.html">About</a>
+      <button id="clearCheckedButton">Clear checked</button>
+      <div class="searchBox">
+        <input type="text" placeholder="Search currency" />
+      </div>
+    </nav>
+
+    <header>
+      <h1>CryptoLive</h1>
+    </header>
+
+    <main>
+      <div id="cardsDivContainer"></div>
+      <div id="maxCoinsWindowContainer">
+        <div class="maxCoinsWindowIntro">
+          <h3>Maximum Coins Reached</h3>
+          <span
+            >You can select up to 5 coins for comparison. To add
+            <span id="coinToAdd"></span> , please choose a coin to remove from
+            list:</span
+          >
+          <br />
+          <br />
+        </div>
+        <div id="radioSelectorContainer"></div>
+        <br />
+        <div class="maxCoinWindowButtons">
+          <button class="confirmButton">Confirm</button>
+          <button class="cancelButton">Cancel</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

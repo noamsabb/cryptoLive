@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Reports</title>
+
+    <!-- Chart.js UMD bundle -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"
+    ></script>
+    <!-- date-fns adapter bundle (for time scales) -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"
+    ></script>
+
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="./design/style.css" />
+    <link rel="stylesheet" href="./design/parallax.css" />
+  </head>
+
+  <body>
+    <div id="coin-bg"></div>
+
+    <nav>
+      <a href="index.html">Home Page</a>
+      <a href="liveReports.html" aria-current="page"> Live reports</a>
+      <a href="about.html">About</a>
+      <div class="searchBox">
+        <input type="text" placeholder="Search currency" />
+      </div>
+    </nav>
+
+    <header>
+      <h1>CryptoLive</h1>
+    </header>
+
+    <main>
+      <div id="liveReportContainer">
+        <canvas id="liveChart" width="600" height="300"></canvas>
+      </div>
+    </main>
+  </body>
+</html>

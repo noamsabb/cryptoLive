@@ -1,0 +1,177 @@
+/* Currency card design */
+#cardsDivContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #fdfcfb 0%,
+    #e1d1b7 60%,
+    #c7b58d 100%
+  );
+  border: 2px solid #b5a57f;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 12px;
+  overflow: hidden;
+  z-index: 1;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.card > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+.textCardContainer {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.card .symbolDiv {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2c3e50;
+  line-height: 1.1;
+}
+
+.card .nameDiv {
+  font-family: Arial, sans-serif;
+  font-size: 0.9em;
+  font-style: italic;
+  color: #555555;
+  line-height: 1.1;
+  margin-top: 2px;
+}
+
+/* Collapse More Info*/
+
+.cardWrapper {
+  perspective: 800px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.infoPanel {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+
+  z-index: 10;
+
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.cardWrapper.open .infoPanel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition-delay: 0s;
+  animation: flipCoin 2s ease-in-out;
+}
+
+.showInfoButton {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 75px;
+  width: 100px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.showInfoButton:hover {
+  background-color: #2b578e;
+  transform: translateY(-2px);
+}
+
+@keyframes flipCoin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(720deg);
+  }
+}
+
+.closeInfoButton {
+  width: 100px;
+  padding: 4px 8px;
+  background-color: #e53e3e;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.closeInfoButton:hover {
+  background-color: #8b2121;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.moreInfo {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  margin-bottom: 40px;
+  justify-self: center;
+  align-self: center;
+  font-weight: bolder;
+  font-family: Consolas, Menlo, "Courier New", monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+
+.currencyId {
+  display: none;
+}

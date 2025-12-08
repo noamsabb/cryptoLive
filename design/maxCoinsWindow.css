@@ -1,0 +1,111 @@
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 4;
+}
+
+
+.overlay.active {
+  display: block;
+}
+#maxCoinsWindowContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 530px;
+  z-index: 5;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFF0 ;
+  display: none; 
+}
+#maxCoinsWindowContainer.active {
+  display: block;
+}
+
+/* Confirm button */
+.confirmButton {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+.confirmButton:hover {
+  background-color: #218838;
+}
+.confirmButton:active {
+  background-color: #1e7e34;
+}
+
+/* Cancel button */
+.cancelButton {
+  background-color: transparent;
+  color: #dc3545;
+  border: 2px solid #dc3545;
+  padding: 0.6em 1.2em;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.cancelButton:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+.cancelButton:active {
+  background-color: #c82333;
+  border-color: #c82333;
+}
+
+.currencyImg {
+  grid-column: 1;
+  grid-row: 1;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#radioSelectorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+}
+
+.coinOption {
+  display: flex;
+  align-items: center; 
+  gap: 0.5rem;
+  margin-left: 40px; 
+}
+
+.maxCoinsWindowIntro > h3 {
+  text-align: center;
+}
+.maxCoinsWindowIntro span {
+  display: inline-block;
+  padding-left: auto;
+  max-width: 90%;
+  text-align: center;
+  line-height: 1.4;
+  margin: auto;
+}
+
+.maxCoinWindowButtons {
+  display: inline-block;
+  text-align: center;
+}

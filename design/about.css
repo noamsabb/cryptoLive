@@ -1,0 +1,102 @@
+.project-overview {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    color: #333;
+    font-family: system-ui, sans-serif;
+  }
+  
+  .overview-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-align: center;
+    color: #1a202c;
+  }
+  
+  .overview-intro {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #4a5568;
+  }
+  
+  .overview-feature {
+    margin-bottom: 1.5rem;
+  }
+  
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #2b6cb0;
+  }
+  
+  .feature-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-left: 1rem;
+    color: #4a5568;
+  }
+  
+  .feature-text code {
+    background-color: #f7fafc;
+    padding: 0.15em 0.3em;
+    border-radius: 4px;
+    font-family: Menlo, monospace;
+    font-size: 0.95em;
+  }
+
+  
+  /* Creator Info Section */
+.creator-info {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .creator-info .overview-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #1a202c;
+  }
+  
+  .creator-details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+  
+  .creator-details li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #4a5568;
+  }
+  
+  .creator-label {
+    font-weight: 600;
+    color: #2b6cb0;
+  }
+  
+  .creator-link {
+    color: #3182ce;
+    text-decoration: none;
+  }
+  
+  .creator-link:hover {
+    text-decoration: underline;
+  }
+  
+  .creator-copy {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #a0aec0;
+  }
+  

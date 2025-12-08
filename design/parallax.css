@@ -1,0 +1,31 @@
+
+#coin-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/imgs/background.jpg");
+
+    background-size: cover;         
+    background-position: center;     
+    background-repeat: no-repeat;     
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: overlay;
+  
+
+    overflow: hidden;
+    z-index: -1;                
+  }
+  
+
+  .coin {
+    position: absolute;
+    top: 0;                     
+    width: 400px;               
+    height: auto;
+    opacity: 0.6;               
+    pointer-events: none;       
+    will-change: transform;     
+  }
+  
