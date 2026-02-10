@@ -8,8 +8,7 @@
   let counter = 0;
 
   //Page loaders
-  if (window.location.pathname.endsWith("/index.html")) {
-    window.addEventListener("load", async () => {
+if (window.location.pathname.endsWith("/index.html") || window.location.pathname === "/") {    window.addEventListener("load", async () => {
       try {
         backgroundParallax();
         loadData();
